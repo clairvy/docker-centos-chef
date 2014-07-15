@@ -1,5 +1,8 @@
-FROM centos
+FROM centos:centos7
 
+MAINTAINER clairvy@gmail.com
+
+USER root
 ENV HOME /root
 
 # install git
