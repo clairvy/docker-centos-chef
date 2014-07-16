@@ -1,4 +1,4 @@
-NAME = clairvy/use_bundler
+NAME = clairvy/chef-solo
 DOCKER_HOST = $(shell boot2docker up 2>&1 | awk -F= '/export/{print $$2}')
 DOCKER = docker --host=$(DOCKER_HOST)
 DOCKER_RUN_CMD = /bin/bash
