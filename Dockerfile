@@ -21,4 +21,8 @@ RUN source $HOME/.bash_profile && rbenv install 2.1.2 && rbenv global 2.1.2
 # install bundle
 RUN source $HOME/.bash_profile && gem install bundle
 
-CMD source $HOME/.bash_profile && rbenv
+# setup
+ADD chef-repo /chef-repo
+
+ENTRYPOINT ["/chef-repo/init"]
+CMD ["run"]
